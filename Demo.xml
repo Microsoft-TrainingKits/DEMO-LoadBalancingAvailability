@@ -5,7 +5,7 @@
 		<Name>sklein</Name>
 	</Author>
 	<Description>In this demonstration, you will see how to configure the load balancer and availability sets to have a highly scalable and available application.</Description>
-	<Document ConversionType="Html">Demo.md</Document>
+	<Document ConversionType="Html">.\Demo.md</Document>
 	<Title>Load Balancing and Availability Sets</Title>
 	<Version>1.0.0</Version>
 	<Source>Source</Source>
