@@ -14,9 +14,9 @@ In this demo you will see how to configure the load balancer and availability se
 
 In the **root** folder of this repository you will find the demo document, **Demo.md**. Before beginning with the demo, make sure you have followed all the required steps indicated at the setup section of the document. 
 
-In the **Source** folder you will find the source code of the completed demo, as well as the setup scripts. Throughout the demo you will be instructed to open and explore the different solutions from the source folder. It is comprised of the following subfolder:
+In the **Source** folder you will find the assets related to this demo. It is comprised of the following subfolders:
 
-- **Setup:** This folder contains the dependency files and the setup scripts necessary to initialize specific configurations of the demo, being its execution is required in the majority of the demos.
+- **Assets:** This folder contains a set of slides that helps to drive the presentation.
 
 ### Get Started ###
 
