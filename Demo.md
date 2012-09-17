@@ -57,7 +57,7 @@ This demo is composed of the following segments:
 
 	Endpoints allow for traffic to the virtual machine. 
 
-	![Add endpoint to VM](images/add-endpoint-to-vm.png?raw=true "Add endpoint to VM")
+	![Add endpoint to VM](Images/add-endpoint-to-vm.png?raw=true "Add endpoint to VM")
 	
 	_Add endpoint to VM_
 
@@ -65,7 +65,7 @@ This demo is composed of the following segments:
 
 1. Name the endpoint web, protocol tcp, 80 and 80.
 
-	![Endpoint details](images/endpoint-details.png?raw=true "Endpoint details")
+	![Endpoint details](Images/endpoint-details.png?raw=true "Endpoint details")
 
 	_Endpoint details_
 
@@ -78,13 +78,13 @@ This demo is composed of the following segments:
 1. Add an endpoint to the 2nd VM. This time you will select load balance an existing endpoint
 
 
-	![Adding the Second Endpoint](images/adding-the-second-endpoint.png?raw=true "Adding the Second Endpoint")
+	![Adding the Second Endpoint](Images/adding-the-second-endpoint.png?raw=true "Adding the Second Endpoint")
 
 	_Adding the Second Endpoint_
 
 1. Fill in the same details
 
-	![Second endpoint details](images/second-endpoint-details.png?raw=true "Second endpoint details")
+	![Second endpoint details](Images/second-endpoint-details.png?raw=true "Second endpoint details")
 
 	_Second endpoint details_
 
@@ -94,7 +94,7 @@ This demo is composed of the following segments:
 
 1. Use **CTRL-F5** to refresh and note the server name changes.
 
-	![Browsing the server](images/browsing-the-server.png?raw=true "Browsing the server")
+	![Browsing the server](Images/browsing-the-server.png?raw=true "Browsing the server")
 
 	_Browsing the server_
 
@@ -110,7 +110,7 @@ This demo is composed of the following segments:
 
 1. Enter "webavset".
 
-	![Creating Availability Set](images/creating-availability-set.png?raw=true "Creating Availability Set")
+	![Creating Availability Set](Images/creating-availability-set.png?raw=true "Creating Availability Set")
 
 	_Creating Availability Set_
 
@@ -124,7 +124,7 @@ This demo is composed of the following segments:
 
 1. Click configure and under availability set select **webavset** and click **Save**.
 
-	![Configuring Availability Set](images/configuring-availability-set.png?raw=true "Configuring Availability Set")
+	![Configuring Availability Set](Images/configuring-availability-set.png?raw=true "Configuring Availability Set")
 
 	_Configuring Availability Set_
 
