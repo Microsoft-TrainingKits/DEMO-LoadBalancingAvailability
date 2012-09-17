@@ -14,13 +14,13 @@ In this demo you will see how to configure the load balancer and availability se
 
 In the **root** folder of this repository you will find the demo document, **Demo.md**. Before beginning with the demo, make sure you have followed all the required steps indicated at the setup section of the document. 
 
-In the **Source** folder you will find the assets related to this demo. It is comprised of the following subfolders:
+In the **Source** folder you will find the assets related to this demo. It is comprised of the following subfolder:
 
-- **Assets:** This folder contains a set of slides that helps to drive the presentation.
+- **Assets:** This folder contains a set of slides that provide context for this demo.
 
 ### Get Started ###
 
-In order to run the solutions provided by this demo you will first need to configure your environment and install any necessary prerequisites such as runtimes, components, or libraries. For your ease, you can download and run the dependency checker [here] (http://go.microsoft.com/fwlink/?LinkId=245702) to automatically check and install all the requirements. Please take into account that you have to copy it inside the **Source/Setup** folder of this demo and change its name to **DC.exe**. Each demo also includes setup instructions for getting started.
+In order to run the solutions provided by this demo you will first need to configure your environment and install any necessary prerequisites such as runtimes, components, or libraries. After cloning the Demo from the repository, follow the steps in the **Setup and Configuration** section of the Demo.md document.
 
 ### Contributing to the Repository ###
 
