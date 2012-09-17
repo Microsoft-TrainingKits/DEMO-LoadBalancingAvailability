@@ -1,16 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Demo xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
 	<Id>LoadBalancingAndAvailabilitySets</Id>
+	<Technologies>
+		<Technology>Windows Azure</Technology>
+	</Technologies>
 	<Author>
 		<Name>sklein</Name>
+		<Blog></Blog>
+		<Email></Email>
 	</Author>
 	<Description>In this demonstration, you will see how to configure the load balancer and availability sets to have a highly scalable and available application.</Description>
-	<Document ConversionType="Html">.\Demo.md</Document>
+	<Document ConversionType="Html">Demo.md</Document>
 	<Title>Load Balancing and Availability Sets</Title>
-	<Version>1.0.0</Version>
+	<Version>1.1.0</Version>
 	<Source>Source</Source>
-	<DependencyChecker>Setup\Dependencies.depi</DependencyChecker>
+	<!-- <DependencyChecker>Setup\Dependencies.depi</DependencyChecker> -->
 	<CustomProperties>    
-		<Property Name="GitHubRepository" Value="https://github.com/WindowsAzure-Preview/Demo-DevCampsVirtualMachines/LoadBalancing-AvailabilitySets" />
+		<Property Name="GitHubRepository" Value="https://github.com/WindowsAzure-TrainingKit/DEMO-LoadBalancingAvailability" />
 	</CustomProperties>
 </Demo>
