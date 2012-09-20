@@ -63,32 +63,32 @@ This demo is composed of the following segments:
 
 	> **Speaking Point**: Note how the traffic is directed to the public port and redirected internally to the private port. This is called port forwarding.
 
-1. Name the endpoint web, protocol tcp, 80 and 80.
+1. Name the endpoint "web", select TCP protocol, and type 80 in the rest of the fields.
 
 	![Endpoint details](Images/endpoint-details.png?raw=true "Endpoint details")
 
 	_Endpoint details_
 
-1. Wait… (45secs - over a minute)
+1. Wait… (45secs - over a minute).
 
-	> **Speaking Point**: Endpoint configuration is serialized so once you add an endpoint to the first VM you must wait to add it to the 2nd until the first updated is completed.
+	> **Speaking Point**: Endpoint configuration is serialized, so once you add an endpoint to the first VM you must wait to add it to the second one until the first updated is completed.
 
-	> The second endpoint is associated with the first to make the traffic load balanced for that specific port (80)
+	> The second endpoint is associated with the first to make the traffic load balanced for that specific port (80).
 
-1. Add an endpoint to the 2nd VM. This time you will select load balance an existing endpoint
+1. Add an endpoint to the second VM. This time you will select 'Load-balance traffic on an existing endpoint'.
 
 
 	![Adding the Second Endpoint](Images/adding-the-second-endpoint.png?raw=true "Adding the Second Endpoint")
 
 	_Adding the Second Endpoint_
 
-1. Fill in the same details
+1. Fill in the same details.
 
 	![Second endpoint details](Images/second-endpoint-details.png?raw=true "Second endpoint details")
 
 	_Second endpoint details_
 
-1. Wait… (45secs - over a minute)
+1. Wait… (45secs - over a minute).
 
 1.	Browse to the site <http://sitename.cloudapp.net/iisstart.htm>.
 
@@ -101,12 +101,12 @@ This demo is composed of the following segments:
 <a name="segment2" />
 ### **Configuring Availability Sets** ###
 
-> **Speaking Point**: Availability Sets tell the Windows Azure fabric controller to put different vms performing the same tasks on different racks in the data center.
+> **Speaking Point**: Availability Sets tell the Windows Azure fabric controller to put different VMs performing the same tasks on different racks in the data center.
 
 > It also puts the VMs in separate upgrade domains so when the fabric controller performs host updates all of the VMs in the same set are never brought down at the same time.
 
 1. Open the first web server in the portal.
-1. Click configure and under availability set select **Create Availability Set**.
+1. Click **Configure** and under availability set select **Create Availability Set**.
 
 1. Enter "webavset".
 
@@ -116,13 +116,13 @@ This demo is composed of the following segments:
 
 1. Click **Save**.
 
-1. Wait 30-seconds to 1 minute for update.
+1. Wait 30 seconds to 1 minute for update.
 
 1. Refresh browser to see changes faster.
 
 1. Open the second web server in the portal.
 
-1. Click configure and under availability set select **webavset** and click **Save**.
+1. Click **Configure** and under availability set select **webavset** and click **Save**.
 
 	![Configuring Availability Set](Images/configuring-availability-set.png?raw=true "Configuring Availability Set")
 
@@ -133,4 +133,4 @@ This demo is composed of the following segments:
 <a name="summary" />
 ## Summary ##
 
-In this demonstration, you learned how to configure two servers for load balancing and configured for availability sets so your virtual machines are highly in the event of a rack failure or a host update in the Windows Azure Data Centers.
+In this demonstration, you learned how to configure the load balancer and availability sets to have a highly scalable and available application.
