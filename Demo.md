@@ -30,7 +30,7 @@ This demo uses the following technologies:
 
 1. Create two **Windows Server 2012** Virtual Machines in the same cloud service (Connect to existing VM in the portal)
 1. Configure the **Web Role** on both nodes.
-1.	Modify the **IISStart.html** page to show the computer name in large text in the main body.
+1.	Modify the **IISStart.htm** page to show the computer name in large text in the main body.
 
 	````HTML
 	<div><h3>servername</h3><br />
@@ -53,7 +53,7 @@ This demo is composed of the following segments:
 
 1. Click on the first web server you provisioned in setup.
 
-1. Click on the endpoints button at the top of your screen and click **NEW endpoint** at the bottom.
+1. Click on the endpoints button at the top of your screen and click **Add endpoint** at the bottom.
 
 	Endpoints allow for traffic to the virtual machine. 
 
@@ -71,7 +71,7 @@ This demo is composed of the following segments:
 
 1. Wait… (45secs - over a minute).
 
-	> **Speaking Point**: Endpoint configuration is serialized, so once you add an endpoint to the first VM you must wait to add it to the second one until the first updated is completed.
+	> **Speaking Point**: Endpoint configuration is serialized, so once you add an endpoint to the first VM you must wait to add it to the second one until the first update is completed.
 
 	> The second endpoint is associated with the first to make the traffic load balanced for that specific port (80).
 
