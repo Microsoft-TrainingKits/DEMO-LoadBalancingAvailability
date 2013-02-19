@@ -170,10 +170,13 @@ This is called **port forwarding**.
 	> Instead of adding an independent endpoint, we will load-balance on an existing endpoint, with load-balancing set name **Web**.
 
 1. Specify the following details:
-	- Name: **Web**
-	- Protocol: **TCP** (grayed out)
-	- Public Port: **80** (grayed out)
-	- Private Port: **80**
+	
+	| Field | Value |
+	|--------|--------|
+	| Name | **Web** |
+	| Protocol | **TCP** (grayed out) |
+	| Public Port | **80** (grayed out) |
+	| Private Port | **80** |
 
 	Click the check mark icon  to continue.
 
