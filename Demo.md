@@ -43,7 +43,7 @@ This demo uses the following technologies:
 	New-AzureVM -ServiceName $svcname -VMs $iisvm1, $iisvm2 -Location "LOCATION"
 	````
 
-	> **Note:** It will take a few minutes for the two new VMs to be provisioned and running._
+	> **Note:** It will take a few minutes for the two new VMs to be provisioned and running.
 
 	> **Speaking Point:**
 
