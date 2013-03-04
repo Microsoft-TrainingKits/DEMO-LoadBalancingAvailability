@@ -5,14 +5,14 @@
     <Technology>Windows Azure</Technology>
   </Technologies>
   <Author>
-    <Name>sklein</Name>
+    <Name></Name>
     <Blog></Blog>
     <Email></Email>
   </Author>
   <Description>In this demonstration, you will see how to configure the load balancer and availability sets to have a highly scalable and available application.</Description>
   <Document ConversionType="Html">Demo.md</Document>
   <Title>Load Balancing and Availability Sets</Title>
-  <Version>1.1.1</Version>
+  <Version>2.0.0</Version>
   <Source>Source</Source>
   <DependencyChecker></DependencyChecker>
   <CustomProperties>
