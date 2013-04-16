@@ -34,7 +34,7 @@ This demo uses the following technologies:
 	````PowerShell
 	$svcname = "ITC-" + $(Get-Random -Minimum 10000 -Maximum 99999)
 
-	$vmimage = "MSFT__Windows-Server-2012-Datacenter-201210.01-en.us-30GB.vhd"
+	$vmimage = "a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-Datacenter-201301.01-en.us-30GB.vhd"
 
 	$iisvm1 = New-AzureVMConfig -Name "iisvm1" -InstanceSize Small -ImageName $vmimage | Add-AzureProvisioningConfig -Windows -Password "Passw0rd!"
 
@@ -49,16 +49,16 @@ This demo uses the following technologies:
 
 	> We start by creating a random name for a cloud service. The name must be unique (<name>.cloudapp.net), so we use a random number to ensure it does not exist yet.
 
-	> The image name is an Azure-provide  **Windows Server 2012** image. You can find all existing image names by using the following PowerShell command:
-Get-AzureVMImage | ft ImageName
+	> The image name is an Azure-provided **Windows Server 2012** image. You can find all existing image names by using the following PowerShell command:
+_Get-AzureVMImage | ft ImageName_
 
 	> The last three commands create a cloud service with two new VMs, based on the Windows Server 2012 image.
 
 	> - **Note**: Make sure the specified **LOCATION** matches the datacenter that the storage account is created in. For example "West US".
 
 	> - **Note**: These commands require a default storage account name. You can set that with the PowerShell command:
-Set-AzureSubscription "<subname>" 
--CurrentStorageAccount "<storagename>"
+Set-AzureSubscription "[subname]" 
+-CurrentStorageAccount "[storagename]"
 
 1. Notice that you can follow the progresss of the PowerShell command execution on the screen.
 
@@ -66,7 +66,7 @@ Set-AzureSubscription "<subname>"
 
 	> **Speaking Point:**
 
-	> After the VMs are created, they  are starting up. This may take two minutes or so.
+	> After the Virtual Machines are created, they will automatically start up. This will take around two minutes.
 
 1. In the Azure portal, on the **Virtual Machines** page, click he **iisvm1** name.
 
@@ -74,7 +74,7 @@ Set-AzureSubscription "<subname>"
 
 	> **Speaking Point:**
 
-	> Even though the VMs are still being starting, we can already examine their network properties.
+	> Even when the Virtual Machines are being starting, you are able examine their network properties.
 
 1. On the iisvm1 page, examine the information under **Quick Glance**. Click the back button to go back to the **Virtual Machines** page.
 
@@ -82,9 +82,9 @@ Set-AzureSubscription "<subname>"
 
 	> **Speaking Point:**
 
-	> Notice the public IP address, and the internal (private) IP address of the starting VM. 
+	> Notice the public IP address, and the internal (private) IP address of the Virtual Machine. 
 
-	> Azure assigns the private IP address to the VM, as soon as it is started.
+	> Azure assigns the private IP address to the Virtual Machine, as soon as it is started.
 
 1. On the Virtual Machines page, wait until both **iisvm1** and **iisvm2** are running. Select **iisvm1**, and then on the toolbar, click **Connect**. Open the RDP connection, and log on with credentials **Administrator / Passw0rd!**.
 
@@ -125,7 +125,7 @@ Install-WindowsFeature -Name  Web-WebServer
 
 	> In the second server, let's use Server Manager to install the Web Server.
 
-	> While the role installed, we can enable load-balancing on the two VMs.
+	> While the role installed, we can enable load-balancing on the two Virtual Machines.
 
 1. In the Windows Azure PowerShell window, type the following commands:
 
@@ -262,7 +262,7 @@ This is called **port forwarding**.
 
 	> The browser displays the iisstart.htm file from IISVM1. Notice the **IISVM1** text on the home page.
 
-1. Press **Ctrl-F5** to refresh the Web page
+1. Press **Ctrl-F5** a couple times to refresh the Web page.
 
 	![Iisstart.htm page on IISVM2](./Images/Iisstart.htm-page-on-IISVM2.png?raw=true "Iisstart.htm page on IISVM2")
 
@@ -310,9 +310,9 @@ This is called **port forwarding**.
 
 	> **Speaking Point:**
 
-	> Once this is finished, you will now see icons with both of the VMs listed in the availability set.  This ensures the **99.95%** availability for your VMs.
+	> Once this is finished, you will now see icons with both of the VMs listed in the availability set.  This ensures the **99.95%** availability for your virtual machines.
 
-	> Notice that iisvm1 and issvm2 may indicate "**Update in progress**" for a few minutes. This indicates that one of the two VMs is moving to another server rack to ensure both VMs are on different racks.
+	> Notice that iisvm1 and issvm2 may indicate "**Update in progress**" for a few minutes. This indicates that one of the two virtual machines is moving to another server rack to ensure both virtual machines are on different racks.
 
 ---
 
