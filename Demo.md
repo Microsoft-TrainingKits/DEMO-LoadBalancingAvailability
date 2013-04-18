@@ -13,7 +13,7 @@ The demo starts by creating two new Windows Server 2012 VMs. After starting the 
 ### Goals ###
 In this demo, you will see three things:
 
-1. How to create VMs
+1. How to create Virtual Machines
 1.	How to configure the Windows Azure Load Balancer
 1.	How to configure Windows Azure Availability Sets
 
@@ -33,17 +33,20 @@ This demo uses the following technologies:
 
 	````PowerShell
 	$svcname = "ITC-" + $(Get-Random -Minimum 10000 -Maximum 99999)
+	$adminUser = "[YOUR-ADMIN-USER]"
+	$adminPassword = "[YOUR-ADMIN-PWD]"
+	$location = "[LOCATION]"
 
 	$vmimage = "a699494373c04fc0bc8f2bb1389d6106__Windows-Server-2012-Datacenter-201301.01-en.us-30GB.vhd"
 
-	$iisvm1 = New-AzureVMConfig -Name "iisvm1" -InstanceSize Small -ImageName $vmimage | Add-AzureProvisioningConfig -Windows -Password "Passw0rd!"
+	$iisvm1 = New-AzureVMConfig -Name "iisvm1" -InstanceSize Small -ImageName $vmimage | Add-AzureProvisioningConfig -Windows -AdminUsername $adminUser -Password $adminPassword
 
-	$iisvm2 = New-AzureVMConfig -Name "iisvm2" -InstanceSize Small -ImageName $vmimage | Add-AzureProvisioningConfig -Windows -Password "Passw0rd!"
+	$iisvm2 = New-AzureVMConfig -Name "iisvm2" -InstanceSize Small -ImageName $vmimage | Add-AzureProvisioningConfig -Windows -AdminUsername $adminUser -Password $adminPassword
 
-	New-AzureVM -ServiceName $svcname -VMs $iisvm1, $iisvm2 -Location "LOCATION"
+	New-AzureVM -ServiceName $svcname -VMs $iisvm1, $iisvm2 -Location $location
 	````
 
-	> **Note:** It will take a few minutes for the two new VMs to be provisioned and running.
+	> **Note:** It will take a few minutes for the two new Virtual Machines to be provisioned and running.
 
 	> **Speaking Point:**
 
@@ -54,11 +57,13 @@ _Get-AzureVMImage | ft ImageName_
 
 	> The last three commands create a cloud service with two new VMs, based on the Windows Server 2012 image.
 
-	> - **Note**: Make sure the specified **LOCATION** matches the datacenter that the storage account is created in. For example "West US".
+	> - **Note**: Make sure to update the **$adminUser**, **$adminPassword** and **$location**. Administrator username is not available.
+
+	> - **Note**: Make sure the specified **$location** matches the datacenter that the storage account is created in. For example "West US".
 
 	> - **Note**: These commands require a default storage account name. You can set that with the PowerShell command:
-Set-AzureSubscription "[subname]" 
--CurrentStorageAccount "[storagename]"
+	Set-AzureSubscription "[subname]" 
+	-CurrentStorageAccount "[storagename]"
 
 1. Notice that you can follow the progresss of the PowerShell command execution on the screen.
 
@@ -86,7 +91,7 @@ Set-AzureSubscription "[subname]"
 
 	> Azure assigns the private IP address to the Virtual Machine, as soon as it is started.
 
-1. On the Virtual Machines page, wait until both **iisvm1** and **iisvm2** are running. Select **iisvm1**, and then on the toolbar, click **Connect**. Open the RDP connection, and log on with credentials **Administrator / Passw0rd!**.
+1. On the Virtual Machines page, wait until both **iisvm1** and **iisvm2** are running. Select **iisvm1**, and then on the toolbar, click **Connect**. Open the RDP connection, and log on with the credentials you defined in Step 1.
 
 	![Connecting to the IISVM1 VM](./Images/Connecting-to-the-IISVM1-VM.png?raw=true "Connecting to the IISVM1 VM")
 
@@ -109,7 +114,7 @@ Install-WindowsFeature -Name  Web-WebServer
 
 	> While the role is installed, we can go to the second server.
 
-1. In the Azure portal, select **iisvm2**, and then on the toolbar, click **Connect**. Open the RDP connection, and log on with credentials **Administrator / Passw0rd!**.
+1. In the Azure portal, select **iisvm2**, and then on the toolbar, click **Connect**. Open the RDP connection, and log on with the credentials you defined in Step 1.
 
 	![Connecting to the IISVM2 VM](./Images/Connecting-to-the-IISVM2-VM.png?raw=true "Connecting to the IISVM2 VM")
 
